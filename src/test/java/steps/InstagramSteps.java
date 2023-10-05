@@ -2,6 +2,8 @@ package steps;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import org.junit.Assert;
 import pages.InstagramPage;
 
 public class InstagramSteps {
@@ -22,8 +24,18 @@ public class InstagramSteps {
     public void selectLoginButton(){
         instagram.login();
     }
-    @And("^search hugo user$")
-    public void searchHugoUser(){
-
+    @And("^search hugo user (.+)$")
+    public void searchUserInstagram(String userInstagram){
+        instagram.selectSearchUser();
+        instagram.enterUserInstagram(userInstagram);
+        instagram.selectUser();
     }
+     @And("^click in follow user$")
+    public void followUser(){
+        instagram.followUserInstagram();
+     }
+     @Then("^the user is followed$")
+    public void validationUserFollowed(){
+         Assert.assertEquals("Pendiente", instagram.followedRequestMessage());
+     }
 }

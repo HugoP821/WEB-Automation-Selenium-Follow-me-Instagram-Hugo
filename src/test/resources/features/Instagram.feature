@@ -7,6 +7,6 @@ Feature: Test Instagram search functionality
     And login with your user userInstagram
     And login with your password passwordInstagram
     And selects the login button
-    And search hugo user
-    And click in follow user hugo
+    And search hugo user hug.paal
+    And click in follow user
     Then the user is followed
