@@ -9,7 +9,7 @@ public class InstagramPage extends basepage{
     public InstagramPage(){
         super(driver);
     }
-    public void navigateToGoogle(){
+    public void navigateToInstagram(){
         navigateTo("https://www.instagram.com/");
     }
     public void enterUser(String user){

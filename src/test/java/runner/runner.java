@@ -11,7 +11,7 @@ import pages.basepage;
         features = "src/test/resources/features",
         glue = "steps",
         monochrome = true,
-        tags = "@Cart"
+        tags = "@Follow"
 )
 public class runner {
     @AfterClass
